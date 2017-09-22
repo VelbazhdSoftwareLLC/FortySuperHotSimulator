@@ -1326,12 +1326,6 @@ public class Main {
 
 		long numberOfSimulations = 10000000L;
 		long progressPrintOnIteration = 10000000L;
-		/*
-		 * view = new int[][]{ new int[]{ 3, 11, 3 }, new int[]{ 4, 12, 4 }, new int[]{
-		 * 5, 8, 5 }, new int[]{ 6, 12, 6 }, new int[]{ 7, 9, 7 }, };
-		 * System.out.println(linesWin (view)); System.out.println(scatterWin (view));
-		 * printView (); Console.ReadLine (); return; /
-		 **/
 
 		/*
 		 * Parse command line arguments.
