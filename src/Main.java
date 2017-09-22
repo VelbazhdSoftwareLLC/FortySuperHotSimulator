@@ -56,6 +56,16 @@ public class Main {
 
 			"CHERRY     ",
 
+			"           ",
+
+			"           ",
+
+			"           ",
+
+			"           ",
+
+			"           ",
+			
 	};
 
 	/**
@@ -473,6 +483,27 @@ public class Main {
 
 	};
 
+	/*
+	 * Static data initializer.
+	 */
+	static {
+		/*
+		 * Transform symbols names to integer values.
+		 */
+		baseReels = new int[baseReelsAsSymbols.length][];
+		for (int i = 0; i < baseReelsAsSymbols.length; i++) {
+			baseReels[i] = new int[baseReelsAsSymbols[i].length];
+			for (int j = 0; j < baseReelsAsSymbols[i].length; j++) {
+				for (int s = 0; s < symbolsNames.length; s++) {
+					if (symbolsNames[s].trim().equals(baseReelsAsSymbols[i][j].trim()) == true) {
+						baseReels[i][j] = s;
+						break;
+					}
+				}
+			}
+		}
+	}
+
 	/**
 	 * Single reels spin to fill view with symbols.
 	 *
@@ -790,11 +821,11 @@ public class Main {
 		} else if (numberOfScatters >= 3 && freeGamesNumber == 0) {
 			freeGamesNumber = 0;
 			freeGamesMultiplier = 0;
-			totalNumberOfFreeGameStarts++;
+			//totalNumberOfFreeGameStarts++;
 		} else if (numberOfScatters >= 3 && freeGamesNumber > 0) {
 			freeGamesNumber += 0;
 			freeGamesMultiplier = 0;
-			totalNumberOfFreeGameRestarts++;
+			//totalNumberOfFreeGameRestarts++;
 		}
 	}
 
